@@ -1,0 +1,18 @@
+<div hx-swap-oob="beforeend" id="messages">
+    <div class="card message">
+        <div class="card-body">
+            <small class="card-subtitle">{{ .UID }} says:</small>
+            <p class="card-text">{{ .Text }}</p>
+        </div>
+
+        <div class="images">
+            {{ range .Images }}
+            <img
+                    alt="Image"
+                    class="card-img-bottom"
+                    src="{{ . }}"
+            >
+            {{ end }}
+        </div>
+    </div>
+</div>
